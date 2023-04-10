@@ -14,7 +14,7 @@ local response = {
 }
 
 -- define a function to handle incoming messages
-local function handleIncomingMessage(sender, message)
+local function handleIncomingMessage(_, _, message)
   -- check if the message is directed at Bob
   if message:match("Bob") then
     -- check if the message includes a trigger phrase to open the gate
@@ -38,9 +38,5 @@ end
 -- main loop to handle incoming messages
 while true do
   -- get the next incoming message
-  local sender, message = chatbox.getMessage()
-  -- handle the message if it exists
-  if sender and message then
-    handleIncomingMessage(sender, message)
-  end
+  chatbox.listen(handleIncomingMessage)
 end
