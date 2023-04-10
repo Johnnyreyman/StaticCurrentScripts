@@ -2,7 +2,7 @@
 local chatbox = peripheral.wrap("left")
 
 -- redstone peripherals
-local gate = gate
+local gate = "top"
 -- define a list of phrases that will trigger Bob to open the gate
 local openGatePhrases = {"open the gate", "can you let me through", "gate please"}
 
