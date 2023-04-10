@@ -1,8 +1,17 @@
 -- get the advanced chatbox peripheral
-local chatbox = peripheral.find("chatBox")
+local chatbox = peripheral.wrap("left")
 
 -- define a list of phrases that will trigger Bob to open the gate
 local openGatePhrases = {"open the gate", "can you let me through", "gate please"}
+
+-- Define Bob's Responses
+local response = {
+  "Opening the gate now!",
+  "Can do!",
+  "Open Says Me!",
+  "Welcome Back!",
+  "Gotcha, opening the gate!"
+}
 
 -- define a function to handle incoming messages
 local function handleIncomingMessage(sender, message)
@@ -12,10 +21,13 @@ local function handleIncomingMessage(sender, message)
     for _, triggerPhrase in ipairs(openGatePhrases) do
       if message:match(triggerPhrase) then
         -- send a response to the user
-        chatbox.say("Sure, opening the gate now!")
+        local random_index = math.random(1, #response)
+        chatbox.say(phrases[random_index], "Bob")
         -- trigger the redstone on top of the advanced computer to open the gate
         redstone.setOutput("top", true)
-        sleep(1)
+        redstone.setOutput("top", false)
+        sleep(5)
+        redstone.setOutput("top", true)
         redstone.setOutput("top", false)
         return
       end
