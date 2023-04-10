@@ -14,7 +14,7 @@ local response = {
 }
 
 -- define a function to handle incoming messages
-local function handleIncomingMessage(_, _, message)
+local function handleIncomingMessage(username, message, uuid, isHidden)
   -- check if the message is directed at Bob
   if message:match("Bob") then
     -- check if the message includes a trigger phrase to open the gate
@@ -22,7 +22,7 @@ local function handleIncomingMessage(_, _, message)
       if message:match(triggerPhrase) then
         -- send a response to the user
         local random_index = math.random(1, #response)
-        chatbox.say(phrases[random_index], "Bob")
+        chatbox.sendMessageToPlayer(response[random_index], username, "Bob")
         -- trigger the redstone on top of the advanced computer to open the gate
         redstone.setOutput("top", true)
         redstone.setOutput("top", false)
@@ -37,6 +37,10 @@ end
 
 -- main loop to handle incoming messages
 while true do
-  -- get the next incoming message
-  chatbox.listen(handleIncomingMessage)
+  -- wait for the next chat message
+  local event, username, message, uuid, isHidden = os.pullEvent("chat")
+  -- handle the message if it exists
+  if username and message then
+    handleIncomingMessage(username, message, uuid, isHidden)
+  end
 end
