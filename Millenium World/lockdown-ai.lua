@@ -7,7 +7,7 @@ local lockdownPhrases = {"Code Black", "under attack", "lock us down", "Renard i
 -- Define a function to handle incoming messages
 local function handleIncomingMessage(username, message, uuid, isHidden)
 --Check if message to Security
-if message:match(Security) and if player:match("StaticCurrent" OR "Cyano_SG") then
+if message:match(Security) and player:match("StaticCurrent" OR "Cyano_SG") then
     -- Check if the message includes a trigger phrase to initiate lockdown
     for _, triggerPhrase in ipairs(lockdownPhrases) do
         if message:match("Security") then
