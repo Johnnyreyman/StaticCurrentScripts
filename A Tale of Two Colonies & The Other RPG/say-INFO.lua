@@ -64,7 +64,19 @@ local phrases = {
   "What's the best way to avoid a Creeper explosion? Stand behind IvyKirkland, she'll protect you with her shield.",
   "Why did MarTay607 refuse to enter the Nether? She heard it was too hot for her liking.",
   "What do you call a Minecraft player who never dies? A legend, and definitely not StaticCurrent.",
-  "How many hearts does IvyKirkland have? Trick question - she doesn't need them because she's already immortal!"
+  "How many hearts does IvyKirkland have? Trick question - she doesn't need them because she's already immortal!",
+  "Why did the zombie refuse to attack StaticCurrent? He heard he was already dead.",
+  "What do you call a Minecraft player who never stops building? An architect.",
+  "Why did the Enderman refuse to teleport away with Cyano? He heard he was too heavy.",
+  "What's the difference between MarTay607 and a creeper? MarTay won't blow up your house.",
+  "Why did the piglin refuse to trade with StaticCurrent? He had nothing to offer.",
+  "What do you call a Minecraft player who never gives up? A survivor.",
+  "Why did the Ender Dragon refuse to attack IvyKirkland? He heard she was too powerful.",
+  "What's the difference between Cyano and a diamond pickaxe? Cyano is much sharper.",
+  "Why did the wilden beast refuse to attack MarTay? He heard she was too friendly.",
+  "What do you call a Minecraft player who never stops exploring? An adventurer.",
+  "Why did the Ghast refuse to attack StaticCurrent? He heard he was already scared enough.",
+  "What's the difference between IvyKirkland and a beacon? IvyKirkland is much brighter."
 }
 
 -- Main program loop
