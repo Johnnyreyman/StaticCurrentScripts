@@ -28,7 +28,11 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
         chatbox.sendMessageToPlayer(response[random_index], username, "Bob")
         -- trigger the redstone on top of the advanced computer to open the gate
         redstone.setOutput(gate, true)
+        sleep(1)
+        redstone.setOutput(gate, false)
         sleep(5)
+        redstone.setOutput(gate, true)
+        sleep(1)
         redstone.setOutput(gate, false)
         return
       end
