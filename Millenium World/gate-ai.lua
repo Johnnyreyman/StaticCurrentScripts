@@ -1,8 +1,9 @@
 -- get the advanced chatbox peripheral
 local chatbox = peripheral.wrap("left")
 
--- redstone peripherals
+-- define the name of the redstone output that controls the gate
 local gate = "top"
+
 -- define a list of phrases that will trigger Bob to open the gate
 local openGatePhrases = {"open the gate", "can you let me through", "gate please"}
 
@@ -27,9 +28,7 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
         chatbox.sendMessageToPlayer(response[random_index], username, "Bob")
         -- trigger the redstone on top of the advanced computer to open the gate
         redstone.setOutput(gate, true)
-        redstone.setOutput(gate, false)
         sleep(5)
-        redstone.setOutput(gate, true)
         redstone.setOutput(gate, false)
         return
       end
