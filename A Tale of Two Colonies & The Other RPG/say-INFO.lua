@@ -122,7 +122,6 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
         -- send a response to the user
         local random_index = math.random(1, #ivyKirklandList)
         chatbox.sendMessage(ivyKirklandList[random_index], "INFOMANIAC")
-      end
     end
   end
 end
@@ -136,7 +135,6 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
         -- send a response to the user
         local random_index = math.random(1, #cyanoList)
         chatbox.sendMessage(cyanoList[random_index], "INFOMANIAC")
-      end
     end
   end
 end
@@ -150,7 +148,6 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
         -- send a response to the user
         local random_index = math.random(1, #martayList)
         chatbox.sendMessage(martayList[random_index], "INFOMANIAC")
-      end
     end
   end
 end
@@ -164,7 +161,6 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
         -- send a response to the user
         local random_index = math.random(1, #jokes)
         chatbox.sendMessageToPlayer(jokes[random_index], username, "INFOMANIAC")
-      end
     end
   end
 end
