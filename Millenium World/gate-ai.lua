@@ -13,9 +13,15 @@ local response = {
   "Can do!",
   "Open Says Me!",
   "Welcome Back!",
-  "Gotcha, opening the gate!"
+  "Gotcha, opening the gate!",
+  "Gate's open, come on through!",
+  "Consider it done!",
+  "You got it!",
+  "Gate's opening as we speak!",
+  "No problem, the gate's opening!",
+  "Just for you, the gate's opening!",
+  "Access granted, the gate's opening!"
 }
-
 -- define a function to handle incoming messages
 local function handleIncomingMessage(username, message, uuid, isHidden)
   -- check if the message is directed at Bob
