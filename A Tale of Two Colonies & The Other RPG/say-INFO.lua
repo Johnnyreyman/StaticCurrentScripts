@@ -104,8 +104,7 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
   -- check if the message is directed at Bob
   if message:match("Infomaniac") and message:match("Static") then
     -- check if the message includes a trigger phrase to open the gate
-    for _, triggerPhrase in ipairs(mineRoastTriggers) do
-      if message:match(triggerPhrase) then
+    if message:match(mineRoastTriggers) then
         -- send a response to the user
         local random_index = math.random(1, #staticCurrentList)
         chatbox.sendMessage(staticCurrentList[random_index], "INFOMANIAC")
@@ -119,8 +118,7 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
   -- check if the message is directed at Bob
   if message:match("Infomaniac") and message:match("Ivy") then
     -- check if the message includes a trigger phrase to open the gate
-    for _, triggerPhrase in ipairs(mineRoastTriggers) do
-      if message:match(triggerPhrase) then
+    if message:match(mineRoastTriggers) then
         -- send a response to the user
         local random_index = math.random(1, #ivyKirklandList)
         chatbox.sendMessage(ivyKirklandList[random_index], "INFOMANIAC")
@@ -134,8 +132,7 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
   -- check if the message is directed at Bob
   if message:match("Infomaniac") and message:match("Cyano") then
     -- check if the message includes a trigger phrase to open the gate
-    for _, triggerPhrase in ipairs(mineRoastTriggers) do
-      if message:match(triggerPhrase) then
+    if message:match(mineRoastTriggers) then
         -- send a response to the user
         local random_index = math.random(1, #cyanoList)
         chatbox.sendMessage(cyanoList[random_index], "INFOMANIAC")
@@ -149,8 +146,7 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
   -- check if the message is directed at Bob
   if message:match("Infomaniac") and message:match("MarTay") then
     -- check if the message includes a trigger phrase to open the gate
-    for _, triggerPhrase in ipairs(mineRoastTriggers) do
-      if message:match(triggerPhrase) then
+    if message:match(mineRoastTriggers) then
         -- send a response to the user
         local random_index = math.random(1, #martayList)
         chatbox.sendMessage(martayList[random_index], "INFOMANIAC")
@@ -159,13 +155,12 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
   end
 end
 
--- define a function to handle STATIC Roasts
+-- define a function to handle Jokes
 local function handleIncomingMessage(username, message, uuid, isHidden)
   -- check if the message is directed at Bob
   if message:match("Infomaniac") then
     -- check if the message includes a trigger phrase to open the gate
-    for _, triggerPhrase in ipairs(jokeTrigger) do
-      if message:match(triggerPhrase) then
+    if message:match(jokeTrigger) then
         -- send a response to the user
         local random_index = math.random(1, #jokes)
         chatbox.sendMessageToPlayer(jokes[random_index], username, "INFOMANIAC")
