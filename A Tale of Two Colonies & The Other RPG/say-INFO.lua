@@ -108,7 +108,6 @@ local function handleIncomingMessage(username, message, uuid, isHidden)
         -- send a response to the user
         local random_index = math.random(1, #staticCurrentList)
         chatbox.sendMessage(staticCurrentList[random_index], "INFOMANIAC")
-      end
     end
   end
 end
